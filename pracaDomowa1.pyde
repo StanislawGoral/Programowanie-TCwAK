@@ -1,4 +1,3 @@
-
 def setup():
     frameRate(60)
     size(1280,720)
@@ -13,19 +12,19 @@ def setup():
     
 def draw():
     global a, b, c, d, Vx, dir
+    rgb=[0,0,0]
     
     background(255)
     
     noStroke()
-    rgb=[0,0,0]
-    rgb[0] = random(0,255)
-    rgb[1] = random(0,255)
-    rgb[2] = random(0,255)
+    for i in range(0,3):
+        rgb[i] = random(0,255)
     fill(rgb[0], rgb[1], rgb[2])
     rect(a, b, c, d)
+    
     if(a == 1160):
         dir=0
-    if(a == 0):
+    elif(a == 0):
         dir=1
         
     if (dir == 1):
