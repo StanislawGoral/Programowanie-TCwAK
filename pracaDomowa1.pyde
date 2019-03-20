@@ -2,49 +2,41 @@ def setup():
     frameRate(60)
     size(1280,720)
 
-    global a, b, c, d, Vx, DirX, DirY
-    a = 0
-    b = 300
-    c = 120
-    d = 120
-    Vx = 5
-    Vy = 5
-    DirX = 1
-    DirY = 1
+    global x, y, w, h, v, dirX, dirY
+    x = random(0,1160); y = random(0,600); w = 120; h = 120; v=5
+    dirX = int(random(0,2)); dirY = int(random(0,2))
+
 def draw():
-    global a, b, c, d, Vx, DirX, DirY
+    global x, y, w, h, v, dirX, dirY
     rgb=[0,0,0]
     
     background(255)
     
-    noStroke()
     for i in range(0,3):
-        rgb[i] = random(0,255)
+        rgb[i] = int(random(0,255))
     fill(rgb[0], rgb[1], rgb[2])
-    rect(a, b, c, d)
+    for i in range(0,3):
+        rgb[i] = int(random(0,255))
+    strokeWeight(10)
+    stroke(rgb[0], rgb[1], rgb[2])
+    rect(x, y, w, h)
     
-    if(a == 1160):
-        DirX=0
-    elif(a == 0):
-        DirX=1
+    if(x > 1160):
+        dirX=0
+    elif(x < 0):
+        dirX=1
     
-    if(b == 600):
-        DirY=0
-    elif(b == 0):
-        DirY=1
+    if(y > 600):
+        dirY=0
+    elif(y < 0):
+        dirY=1
         
-    if (DirX == 1):
-        a=a+Vx
+    if (dirX == 1):
+        x=x+v
     else:
-        a=a-Vx
+        x=x-v
     
-    if (DirY == 1):
-        b=b+Vx
+    if (dirY == 1):
+        y=y+v
     else:
-        b=b-Vx
-    
-    
-
-
-
-    
+        y=y-v
