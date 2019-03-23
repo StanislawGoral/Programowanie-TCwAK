@@ -3,9 +3,9 @@ def setup():
     frameRate(1000000)
     size(320,240)
     
-    global x, y, w, h, Xo, prob, frame, start
+    global x, y, w, h, Xo, frame, start
     global r, g, b
-    x=0; y=0; w=1; h=1; Xo=1; prob=0
+    x=0; y=0; w=1; h=1; Xo=1
     start = 0; count=1
     r=int(random(0,255)); g=int(random(0,255)); b=int(random(0,255))
 
@@ -20,7 +20,7 @@ def setup():
     
 def draw():
 
-    global x, y, w, h, Xo, prob, frame, start
+    global x, y, w, h, Xo, frame, start
     global r, g, b
 
     rgb=[r,g,b]
