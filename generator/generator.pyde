@@ -80,8 +80,7 @@ def draw():
                 y=1
                 start=1
     
-    if(start==1):
-                
+    if(start==1):        
         if(x==320):
             x=0
             y=y+1
