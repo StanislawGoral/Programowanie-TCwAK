@@ -22,7 +22,7 @@ class Button(object):
         
 # USTAWIENIA
 def setup():
-    global state, speed, gear_1, gear_2, gear_3, bg, btn, distance, icons; state = 0# zmienne globalne
+    global state, speed, gear_1, gear_2, gear_3, bg, btn, distance, icons; state = 0 # zmienne globalne
    
     # USTAWIENIA OKNA
     size(1280, 720)
