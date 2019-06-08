@@ -16,11 +16,9 @@ class Button(object):
     def highlight(self):
         self.appearance = loadImage(self.sprite + '_high' + self.ext); self.state = 1
     def click(self):
-        self.appearance = loadImage(self.sprite + '_click' + self.ext)
-        self.state = 2
+        self.appearance = loadImage(self.sprite + '_click' + self.ext); self.state = 2
     def release(self):
-        self.appearance = loadImage(self.sprite + self.ext)
-        self.state = 0
+        self.appearance = loadImage(self.sprite + self.ext); self.state = 0
         
 # USTAWIENIA
 def setup():
