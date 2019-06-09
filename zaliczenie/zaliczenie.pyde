@@ -78,11 +78,11 @@ def draw():
         imageMode(CORNER)
         image(bg, 0 ,0)
         imageMode(CENTER)
-        translate(gear_1.x, gear_1.y); rotate(radians(gear_1.angle)); image(gear_1.appearance, 0, 0)
+        gear_1.rotation(gear_1.angle); image(gear_1.appearance, 0, 0)
         resetMatrix()
-        translate(gear_2.x, gear_2.y); rotate(radians(gear_2.angle)); image(gear_2.appearance, 0, 0)
+        gear_2.rotation(gear_2.angle); image(gear_2.appearance, 0, 0)
         resetMatrix()
-        translate(gear_3.x, gear_3.y); rotate(radians(gear_3.angle));image(gear_3.appearance, 0, 0)
+        gear_3.rotation(gear_3.angle); image(gear_3.appearance, 0, 0)
         resetMatrix()
     
     # KIEDY WŁĄCZONE, DEFINICJA OBROTU
